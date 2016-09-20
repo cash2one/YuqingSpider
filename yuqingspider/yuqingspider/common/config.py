@@ -23,4 +23,8 @@ SearchEngineResultSelectors= {
 MONGODB_HOST = '127.0.0.1'
 MONGODB_PORT = 27017
 
-
+MYSQL_HOST = 'localhost'
+MYSQL_PORT = 3306
+MYSQL_USER = 'root'
+MYSQL_PASSWD = '123'
+SPIDER_DB = 'yuqing'

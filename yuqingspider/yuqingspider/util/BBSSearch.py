@@ -39,7 +39,7 @@ def BBS_url_extract(url, keywords):
         print data
         #headers = {"Content-Type": "application/x-www-form-urlencoded", 'Accept-Encoding': ''} 
         headers = {'Accept-Encoding': ''}
-        req2 = r.post(url, data = data,  allow_redirects=False,  headers=headers)
+        req2 = r.post(url, data=data,  allow_redirects=False,  headers=headers)
         print req2.text
         print req2.headers
         print req2.headers['location']
@@ -51,7 +51,7 @@ def BBS_url_extract(url, keywords):
         searchid = ''
         print e
     try: 
-        return {'keyword': res['kw'], 'searchid' : res['searchid']}
+        return {'keyword': res['kw'], 'searchid': res['searchid']}
     except:
         pass
 

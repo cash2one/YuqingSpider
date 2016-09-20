@@ -48,10 +48,9 @@ SearchNames = {
 }
 
 SearchNameNew = {
-    'baidu': 'baidunews',
-    'sogou': 'sogounews'
-    # 'petroren': '石油人论坛',
-    # 'baiduyun': '百度云论坛',
-    # 'daxues': '大学生网论坛',
+
+    'petroren': '石油人论坛',
+    'baiduyun': '百度云论坛',
+    'daxues': '大学生网论坛',
     # 'sunpetro': '阳光石油论坛',
 }

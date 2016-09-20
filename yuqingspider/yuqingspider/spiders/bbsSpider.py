@@ -1,9 +1,11 @@
-__author__ = 'tanlong'
+__author__ = 'wtq'
 # -*- coding: UTF-8 -*-
+
+import redis
 import time as TIME
 from scrapy.spiders import Spider
 from scrapy import Request
-from ..common.searResultPages import searResultPages
+from ..common.md5 import md5
 from ..common.searchName import SearchNameNew
 from ..common.searchEngines import SearchEngineResultSelectors
 from ..common.searchEngines import SearchEngines
@@ -15,6 +17,8 @@ from ..util.transreply import transreply
 from ..util.extracttime import extracttime
 from ..util.translink import translink
 
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
+
 
 class bbsSpider(Spider):
     name = 'bbsSpider'
@@ -23,7 +27,7 @@ class bbsSpider(Spider):
     searchEngine = None
     selector = None
 
-    def __init__(self, keyword='石油', se='baidu', pages=3, *args, **kwargs):
+    def __init__(self, se='baidu', pages=3, *args, **kwargs):
         """
         pages is the number of which the page that you want to crawl
         then it will create different url by different pages keyword etc...
@@ -35,30 +39,34 @@ class bbsSpider(Spider):
         :return:
         """
         super(bbsSpider, self).__init__(*args, **kwargs)
-        # self.keyword = keyword.lower().encode('utf-8')
-        self.keyword = keyword
-        for k, v in SearchNameNew.items():
-            engine, names = k, v
-            print engine, names
-            engineUrl = SearchEngines[engine]
-            if 'mod=forum' in engineUrl:
-                #url中带有mod=forum的是论坛搜索
-                try:
-                    # BBS_url_extract的作用是，将搜索的关键词转化url中的表达形式
-                    res = BBS_url_extract(engineUrl.split('?')[0], keyword)
+        # 查询的关键词由redis中的键值对， key: news_spider, value: list[keyword1, keyword2..]
+        keywords = r.lrange('news_keyword', 0, 6)
+        for keyword in keywords:
+
+            # self.keyword = keyword.lower().encode('utf-8')
+            self.keyword = keyword
+            for k, v in SearchNameNew.items():
+                engine, names = k, v
+                print engine, names
+                engineUrl = SearchEngines[engine]
+                if 'mod=forum' in engineUrl:
+                    #url中带有mod=forum的是论坛搜索
+                    try:
+                        # BBS_url_extract的作用是，将搜索的关键词转化url中的表达形式
+                        res = BBS_url_extract(engineUrl.split('?')[0], keyword)
+                        for p in range(1, int(pages) + 1):
+                            # create different url by the different page
+                            url = engineUrl.format(res['keyword'], p, res['searchid'])
+                            print 'changed_bbs_url', url
+                            self.start_urls.append(
+                                {'url': url, 'name': names, 'selector': SearchEngineResultSelectors[engine]})
+                    except:
+                        print 'url failed...'
+                else:
                     for p in range(1, int(pages) + 1):
-                        # create different url by the different page
-                        url = engineUrl.format(res['keyword'], p, res['searchid'])
-                        print 'changed_bbs_url', url
-                        self.start_urls.append(
-                            {'url': url, 'name': names, 'selector': SearchEngineResultSelectors[engine]})
-                except:
-                    print 'url failed...'
-            else:
-                for p in range(1, int(pages) + 1):
-                    url = engineUrl.format(self.keyword, p)
-                    print 'changed_not_bbs_url', url
-                    self.start_urls.append({'url': url, 'name': names, 'selector': SearchEngineResultSelectors[engine]})
+                        url = engineUrl.format(self.keyword, p)
+                        print 'changed_not_bbs_url', url
+                        self.start_urls.append({'url': url, 'name': names, 'selector': SearchEngineResultSelectors[engine]})
 
     def start_requests(self):
         for url in self.start_urls:
@@ -113,7 +121,7 @@ class bbsSpider(Spider):
                 print ''.join(source), ''.join(title), 'error'
 
             item['publish_time'] = str(time)
-            item['cate_name'] = "bbssearch"
+            item['spider_name'] = "bbsSpider"
             item['catch_date'] = str(int(TIME.time()))
             item['From'] = "2"
             item['url'] = ''.join(link).strip()
@@ -121,8 +129,15 @@ class bbsSpider(Spider):
             item['summary'] = ''.join(abstract).strip()
             item['site_url'] = response.url
             item['author'] = ''.join(author).strip()
-            item['comments'] = ''.join(ans).strip()
-            item['view'] = ''.join(lookup).strip()
-            item['name'] = response.meta['name']
+            item['replay_times'] = ''.join(ans).strip()
+            item['view_times'] = ''.join(lookup).strip()
+            item['site_name'] = response.meta['name']
             if item['url']:
                 yield item
+                yield Request(item['url'], callback=self.parse_body)
+
+    def parse_body(self, response):
+
+        url_md5 = md5(response.url)
+        html_body = response.body
+        r.set(url_md5, html_body)
