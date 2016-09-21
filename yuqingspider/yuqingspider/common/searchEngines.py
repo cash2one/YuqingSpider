@@ -131,3 +131,5 @@ SearchEngineResultSelectors= {
     'dqdaily':{'block':'//ul/li[@class="pbw"]','link':'h3/a/@href','title':'h3/a/text()','from':'.//p[3]/span[3]/a/text()','abstract':'.//p[2]/text()','answerandlookup':'.//p[1]/text()','time':'.//p[3]/span[1]/text()','author':'.//p[3]/span[2]/a/text()'},
     '010':{'block':'//ul/li[@class="pbw"]','link':'h3/a/@href','title':'h3/a/text()','from':'.//p[3]/span[3]/a/text()','abstract':'.//p[2]/text()','answerandlookup':'.//p[1]/text()','time':'.//p[3]/span[1]/text()','author':'.//p[3]/span[2]/a/text()'},
 }
+
+news_site = ['baidu', 'sogou', 'qihoo', 'youdao']

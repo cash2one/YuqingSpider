@@ -19,7 +19,8 @@ class YuqingspiderPipeline(object):
 
     def __init__(self):
         # mysql
-        self.conn = MySQLdb.connect(host='localhost', port=3306, user='root', passwd='123', db='yuqing')
+        # self.conn = MySQLdb.connect(host='localhost', port=3306, user='root', passwd='123', db='yuqing')
+        self.conn = conn_mysql()
         self.mysqlop = self.conn.cursor()
         # redis
         self.r_conn = redis.StrictRedis(host='localhost', port=6379, db=0)
@@ -45,7 +46,7 @@ class YuqingspiderPipeline(object):
             # self.r_conn.set(url_md5, html_body.read())
             # item['html_body'] = None
 
-            sqli = "insert into spider_content values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+            sqli = "insert into spider_content values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
             news = {'content': item}
             # self.db.news.insert(news)
 
@@ -53,29 +54,27 @@ class YuqingspiderPipeline(object):
                 # self.mysqlop.execute("insert into spider_content values('url_md5')")
                 self.mysqlop.execute(sqli, (url_md5, None, item['spider_name'], item['catch_date'],
                                             item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
-                                            None, None, None, item['site_name'].encode('utf-8')))
-
+                                            None, None, None, item['site_name'].encode('utf-8'), None))
 
                 self.db.emergency.insert(news)
-            elif item['From'] == '1':
-                # self.mysqlop.execute(sqli, (url_md5, item['publish_time'], item['spider_name'], item['catch_date'],
-                #                             item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
-                #                             None, None, None, item['site_name'].encode('utf-8')))
+            elif item['From'] == '1' or item['From'] == '3':
+                self.mysqlop.execute(sqli, (url_md5, item['publish_time'], item['spider_name'], item['catch_date'],
+                                            item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
+                                            None, None, None, item['site_name'].encode('utf-8'), None))
 
                 self.db.news.insert(news)
             elif item['From'] == '2':
 
                 self.mysqlop.execute(sqli, (url_md5, item['publish_time'], item['spider_name'], item['catch_date'],
                                             item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
-                                            item['author'].encode('utf-8'), item['replay_times'], item['view_times'], item['site_name'].encode('utf-8')))
+                                            item['author'].encode('utf-8'), item['replay_times'], item['view_times'], item['site_name'].encode('utf-8'), None))
                 self.db.bbs.insert(news)
-
-                # 提交duimysql操作的事物
 
         except Exception, e:
             print 'pipeline error', e
 
     def close_spider(self, spider):
+        # commit task and close mysql
         self.mysqlop.close()
         self.conn.commit()
         self.conn.close()

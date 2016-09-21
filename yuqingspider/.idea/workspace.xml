@@ -20,14 +20,24 @@
     <favorites_list name="yuqingspider" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.72518456">
+    <splitter split-orientation="horizontal" split-proportion="0.17944899">
       <split-first>
         <leaf>
+          <file leaf-file-name="searchEngines.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/yuqingspider/common/searchEngines.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="bbsSpider.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/bbsSpider.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+                  <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
                   <folding>
                     <element signature="e#44#56#0" expanded="true" />
                   </folding>
@@ -47,45 +57,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="conn_mysql.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/yuqingspider/common/conn_mysql.py">
+          <file leaf-file-name="emergencySpider.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/emergencySpider.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="18" column="20" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                   <folding>
-                    <element signature="e#66#80#0" expanded="true" />
+                    <element signature="e#33#66#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="conn_mongo.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/yuqingspider/common/conn_mongo.py">
+          <file leaf-file-name="blogSpider.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/blogSpider.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/yuqingspider/common/config.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="emergencySpider.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/emergencySpider.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.4970415">
-                  <caret line="56" column="55" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+                  <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
                   <folding>
-                    <element signature="e#33#66#0" expanded="true" />
+                    <element signature="e#70#81#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -95,7 +85,27 @@
             <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/newsSpider.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+                  <caret line="114" column="38" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/yuqingspider/pipelines.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.9574074">
+                  <caret line="72" column="48" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="conn_mysql.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/yuqingspider/common/conn_mysql.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="17" column="24" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -105,7 +115,7 @@
             <entry file="file://$PROJECT_DIR$/yuqingspider/common/searResultPages.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="39" column="38" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                  <caret line="22" column="27" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
                   <folding>
                     <element signature="e#24#37#0" expanded="true" />
                   </folding>
@@ -117,17 +127,7 @@
             <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/http/request/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="93" column="21" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="searchName.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/yuqingspider/common/searchName.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="56" column="19" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+                  <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -137,11 +137,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="bbsSpider.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="bbsSpider.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/bbsSpider.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.25887573">
-                  <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="119" column="54" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
                   <folding>
                     <element signature="e#44#56#0" expanded="true" />
                   </folding>
@@ -153,17 +153,29 @@
             <entry file="file://$PROJECT_DIR$/yuqingspider/items/BaseItems.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="7" column="4" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                  <caret line="6" column="34" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/yuqingspider/pipelines.py">
+          <file leaf-file-name="common_body_parse.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/yuqingspider/common/common_body_parse.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.1277778">
+                  <caret line="110" column="4" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#66#75#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/yuqingspider/settings.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="46" column="7" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+                  <caret line="23" column="30" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -185,7 +197,6 @@
       <list>
         <option value="$PROJECT_DIR$/yuqingspider/items/WeiboItems.py" />
         <option value="$PROJECT_DIR$/yuqingspider/common/conn_mongo.py" />
-        <option value="$PROJECT_DIR$/yuqingspider/settings.py" />
         <option value="$PROJECT_DIR$/yuqingspider/common/searResultPages.py" />
         <option value="$PROJECT_DIR$/yuqingspider/util/BBSSearch.py" />
         <option value="$PROJECT_DIR$/yuqingspider/common/searchName.py" />
@@ -193,14 +204,18 @@
         <option value="$PROJECT_DIR$/yuqingspider/util/transtime.py" />
         <option value="$PROJECT_DIR$/yuqingspider/items/BaseItems.py" />
         <option value="$PROJECT_DIR$/yuqingspider/util/run_spider.py" />
-        <option value="$PROJECT_DIR$/yuqingspider/common/searchEngines.py" />
         <option value="$PROJECT_DIR$/yuqingspider/common/config.py" />
         <option value="$PROJECT_DIR$/yuqingspider/common/conn_mysql.py" />
-        <option value="$PROJECT_DIR$/yuqingspider/pipelines.py" />
         <option value="$PROJECT_DIR$/yuqingspider/spiders/emergencySpider.py" />
         <option value="$PROJECT_DIR$/yuqingspider/common/md5.py" />
-        <option value="$PROJECT_DIR$/yuqingspider/spiders/newsSpider.py" />
         <option value="$PROJECT_DIR$/yuqingspider/spiders/bbsSpider.py" />
+        <option value="$PROJECT_DIR$/yuqingspider/spiders/blogSpider.py" />
+        <option value="/usr/local/lib/python2.7/dist-packages/readability/__init__.py" />
+        <option value="$PROJECT_DIR$/yuqingspider/pipelines.py" />
+        <option value="$PROJECT_DIR$/yuqingspider/common/searchEngines.py" />
+        <option value="$PROJECT_DIR$/yuqingspider/spiders/newsSpider.py" />
+        <option value="$PROJECT_DIR$/yuqingspider/settings.py" />
+        <option value="$PROJECT_DIR$/yuqingspider/common/common_body_parse.py" />
       </list>
     </option>
   </component>
@@ -300,24 +315,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="items" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yuqingspider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yuqingspider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yuqingspider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -341,24 +338,7 @@
       <recent name="$PROJECT_DIR$/yuqingspider" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.md5">
-    <configuration default="false" name="run_spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yuqingspider/util" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="yuqingspider" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yuqingspider/util/run_spider.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.common_body_parse">
     <configuration default="false" name="md5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -423,6 +403,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="yuqingspider" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yuqingspider/pipelines.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="common_body_parse" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yuqingspider/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="yuqingspider" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yuqingspider/common/common_body_parse.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -550,19 +547,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.run_spider" />
-      <item index="1" class="java.lang.String" itemvalue="Python.md5" />
-      <item index="2" class="java.lang.String" itemvalue="Python.bbsSpider" />
-      <item index="3" class="java.lang.String" itemvalue="Python.searchEngines" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pipelines" />
+      <item index="0" class="java.lang.String" itemvalue="Python.md5" />
+      <item index="1" class="java.lang.String" itemvalue="Python.bbsSpider" />
+      <item index="2" class="java.lang.String" itemvalue="Python.searchEngines" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pipelines" />
+      <item index="4" class="java.lang.String" itemvalue="Python.common_body_parse" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.md5" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pipelines" />
-        <item index="2" class="java.lang.String" itemvalue="Python.searchEngines" />
-        <item index="3" class="java.lang.String" itemvalue="Python.bbsSpider" />
-        <item index="4" class="java.lang.String" itemvalue="Python.run_spider" />
+        <item index="0" class="java.lang.String" itemvalue="Python.common_body_parse" />
+        <item index="1" class="java.lang.String" itemvalue="Python.md5" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pipelines" />
+        <item index="3" class="java.lang.String" itemvalue="Python.searchEngines" />
+        <item index="4" class="java.lang.String" itemvalue="Python.bbsSpider" />
       </list>
     </recent_temporary>
   </component>
@@ -583,14 +580,14 @@
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19431593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11235955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.099616855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2733078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -622,7 +619,7 @@
           <line>7</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -742,14 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yuqingspider/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -810,16 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#66#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/news_content">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11267" column="56" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -840,20 +819,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yuqingspider/common/conn_mysql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#66#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yuqingspider/common/searchName.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="19" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -861,7 +830,7 @@
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/http/request/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="21" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -876,34 +845,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yuqingspider/items/BaseItems.py">
+    <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/blogSpider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+          <folding>
+            <element signature="e#70#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/readability/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03402367">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yuqingspider/pipelines.py">
+    <entry file="file://$PROJECT_DIR$/yuqingspider/common/searResultPages.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yuqingspider/common/conn_mysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/newsSpider.py">
+    <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/emergencySpider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
-          <folding />
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#33#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yuqingspider/common/searchEngines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13609467">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yuqingspider/items/BaseItems.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -911,29 +910,43 @@
     <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/bbsSpider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+          <caret line="119" column="54" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
           <folding>
             <element signature="e#44#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yuqingspider/common/searResultPages.py">
+    <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/newsSpider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
+          <caret line="114" column="38" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yuqingspider/spiders/emergencySpider.py">
+    <entry file="file://$PROJECT_DIR$/yuqingspider/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4970415">
-          <caret line="56" column="55" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yuqingspider/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9574074">
+          <caret line="72" column="48" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yuqingspider/common/common_body_parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1277778">
+          <caret line="110" column="4" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding>
-            <element signature="e#33#66#0" expanded="true" />
+            <element signature="e#66#75#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -10,14 +10,16 @@ import redis
 from scrapy import Request
 from scrapy.spiders import Spider
 from ..common.md5 import md5
+from ..common.searchEngines import news_site
+from ..common.conn_mysql import conn_mysql
 from ..common.searResultPages import searResultPages
 from ..common.searchEngines import SearchEngineResultSelectors
 from scrapy.selector import Selector
 from ..items.BaseItems import BaseItem
 from ..util.transtime import transtime
 
-
 r = redis.StrictRedis(host='localhost', port=6379, db=0)
+mysql_conn = conn_mysql()
 
 
 class newsSpider(Spider):
@@ -27,19 +29,22 @@ class newsSpider(Spider):
     searchEngine = None
     selector = None
 
-    def __init__(self, keyword='石油', se='baidu', pages=1, *args, **kwargs):
+    def __init__(self, keyword='石油', se='baidu', pages=30, *args, **kwargs):
         # 搜素关键词从redis中读取， 要使用的搜索引擎生成类的时候传入默认为youdao
         super(newsSpider, self).__init__(*args, **kwargs)
         self.item = BaseItem()
 
-        # get keyword and se from redis
-        keywords = r.lrange('news_keyword', 0, 6)
-        ses = r.lrange('news_site', 0, 6)
+        mysqlop = mysql_conn.cursor()
+        mysqlop.execute("select keyword from key_words")
+        keywords = mysqlop.fetchmany(size=10)
+
+        ses = news_site
         for se in ses:
             # for se in ses:
-            for keyword in keywords:
-                self.keyword = keyword.lower()
-                self.searchEngine = se.lower()
+            for item in keywords:
+                keyword = item[0]
+
+                self.searchEngine = se
                 self.selector = SearchEngineResultSelectors[self.searchEngine]
                 # 根据关键词与站点的名字与pages生成对应的不同的url
                 pageUrls = searResultPages(keyword, se, int(pages))
@@ -76,6 +81,9 @@ class newsSpider(Spider):
                     if len(string) >= 2:
                         ctime = transtime(string[1].strip())
                         name = string[0].strip()
+                    else:
+                        ctime = None
+                        name = None
                 except Exception, e:
                     print 'extract time error', e
                     # print ''.join(source), ''.join(title), 'error'
@@ -94,8 +102,6 @@ class newsSpider(Spider):
                 yield self.item
                 yield Request(self.item['url'], callback=self.parse_body)
 
-                # yield self.item
-
     def parse_body(self, response):
         """
         url_md5 as key, html body as value then save to redis
@@ -104,4 +110,5 @@ class newsSpider(Spider):
         """
         url_md5 = md5(response.url)
         html_body = response.body
-        r.set(url_md5, html_body)
+        if len(html_body) > 5:
+            r.set(url_md5, html_body)
