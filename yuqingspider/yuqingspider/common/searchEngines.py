@@ -8,9 +8,6 @@ SearchEngines = {
     'qihoo': 'http://news.so.com/ns?q={0}&pn={1}',
     'youdao': 'http://news.youdao.com/search?q={0}&start={1}',
     'sogoublog': 'http://www.sogou.com/web?query={0}&interation=196647&page={1}',
-    'weibosearch': 'http://s.weibo.com/weibo/{0}&page={1}',
-    'weibocontent': 'http://weibo.com/u/{0}/?is_all={1}',
-    'weibohot': 'http://m.weibo.cn/p/index?containerid=100803_-_page_hot_list{0}/{1}',
     'rqxx': 'http://bbs.rqxx.com.cn/search.php?mod=forum&searchid={2}&orderby=dateline&ascdesc=desc&searchsubmit=yes&kw={0}&page={1}',
     'hc360':'http://zhannei.baidu.com/cse/search?q={0}&p={1}&click=1&s=1366092766520538444&nsid=',
     'kdnet':'http://search.kdnet.net/?q={0}&sa=%CB%D1%CB%F7&category=title&boardid=0&arrival=2013-03-01&departure=2016-03-01&p={1}&m=705d8',
@@ -133,3 +130,9 @@ SearchEngineResultSelectors= {
 }
 
 news_site = ['baidu', 'sogou', 'qihoo', 'youdao']
+
+WeiboEngines = {
+    'weibosearch': 'http://s.weibo.com/weibo/{0}&page={1}',
+    'weibocontent': 'http://weibo.com/u/{0}/?is_all={1}',
+    'weibohot': 'http://m.weibo.cn/p/index?containerid=100803_-_page_hot_list{0}/{1}',
+}

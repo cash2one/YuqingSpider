@@ -12,9 +12,11 @@ class searResultPages:
     currentPage = 1
     searchEngine = None
 
-    def __init__(self, keyword, searchEngine, totalPage):
-        self.searchEngine = searchEngine.lower()
-        self.searchEngineUrl = SearchEngines[self.searchEngine]
+    def __init__(self, keyword, url, totalPage, type_page):
+        self.type_page = type_page
+        # self.searchEngine = searchEngine.lower()
+        # self.searchEngineUrl = SearchEngines[self.searchEngine]
+        self.searchEngineUrl = url
         self.totalPage = totalPage
         self.keyword = keyword
         print "total page:{0}".format(self.totalPage)
@@ -23,11 +25,13 @@ class searResultPages:
         return self
 
     def _currentUrl(self):
-        if self.searchEngine in TurnPageByCount:
+        if self.type_page:
+            # 1 page by 10
+        # if self.searchEngine in TurnPageByCount:
             return self.searchEngineUrl.format(self.keyword, str((self.currentPage - 1) * 10))
-        elif 'weibo' in self.searchEngine:
-            print 'self.keyword:%s' % self.keyword
-            return self.searchEngineUrl.format(urllib.quote(str(self.keyword)), str(self.currentPage))
+        # elif 'weibo' in self.searchEngine:
+        #     print 'self.keyword:%s' % self.keyword
+        #     return self.searchEngineUrl.format(urllib.quote(str(self.keyword)), str(self.currentPage))
         else:
             return self.searchEngineUrl.format(self.keyword, str(self.currentPage))
 

@@ -2,11 +2,13 @@ __author__ = 'wtq'
 # -*- coding: UTF-8 -*-
 
 import redis
+import random
 import time as TIME
 from scrapy.spiders import Spider
 from scrapy import Request
 from ..common.md5 import md5
-from ..common.searchName import SearchNameNew
+from ..common.conn_mysql import conn_mysql
+from ..common.searchName import SearchNames
 from ..common.searchEngines import SearchEngineResultSelectors
 from ..common.searchEngines import SearchEngines
 from scrapy.selector import Selector
@@ -18,6 +20,7 @@ from ..util.extracttime import extracttime
 from ..util.translink import translink
 
 r = redis.StrictRedis(host='localhost', port=6379, db=0)
+mysql_conn = conn_mysql()
 
 
 class bbsSpider(Spider):
@@ -40,12 +43,15 @@ class bbsSpider(Spider):
         """
         super(bbsSpider, self).__init__(*args, **kwargs)
         # 查询的关键词由redis中的键值对， key: news_spider, value: list[keyword1, keyword2..]
-        keywords = r.lrange('news_keyword', 0, 6)
-        for keyword in keywords:
+        mysqlop = mysql_conn.cursor()
+        mysqlop.execute("select keyword from key_words")
+        keywords = mysqlop.fetchmany(size=100)
+
+        for item in keywords:
 
             # self.keyword = keyword.lower().encode('utf-8')
-            self.keyword = keyword
-            for k, v in SearchNameNew.items():
+            self.keyword = item
+            for k, v in SearchNames.items():
                 engine, names = k, v
                 print engine, names
                 engineUrl = SearchEngines[engine]
@@ -53,7 +59,7 @@ class bbsSpider(Spider):
                     #url中带有mod=forum的是论坛搜索
                     try:
                         # BBS_url_extract的作用是，将搜索的关键词转化url中的表达形式
-                        res = BBS_url_extract(engineUrl.split('?')[0], keyword)
+                        res = BBS_url_extract(engineUrl.split('?')[0], self.keyword)
                         for p in range(1, int(pages) + 1):
                             # create different url by the different page
                             url = engineUrl.format(res['keyword'], p, res['searchid'])
@@ -67,6 +73,7 @@ class bbsSpider(Spider):
                         url = engineUrl.format(self.keyword, p)
                         print 'changed_not_bbs_url', url
                         self.start_urls.append({'url': url, 'name': names, 'selector': SearchEngineResultSelectors[engine]})
+        random.shuffle(self.start_urls)
 
     def start_requests(self):
         for url in self.start_urls:
@@ -134,7 +141,7 @@ class bbsSpider(Spider):
             item['site_name'] = response.meta['name']
             if item['url']:
                 yield item
-                yield Request(item['url'], callback=self.parse_body)
+                # yield Request(item['url'], callback=self.parse_body)
 
     def parse_body(self, response):
 

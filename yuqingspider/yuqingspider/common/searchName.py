@@ -1,5 +1,6 @@
 # coding:utf-8
 SearchNames = {
+
     'rqxx': '华油论坛',
     'hc360': '慧聪论坛',
     'kdnet': '凯迪论坛',
@@ -48,7 +49,14 @@ SearchNames = {
 }
 
 SearchNameNew = {
-
+    'baidu': '百度新闻',
+    'qihoo': '360新闻',
+    'youdao': '有道新闻',
+    'sogou': '搜狗新闻',
+    'sogoublog':'搜狗博客',
+    'weibosearch':'新浪微博',
+    'weibocontent':'新浪微博',
+    'weibohot':'新浪微博',
     'petroren': '石油人论坛',
     'baiduyun': '百度云论坛',
     'daxues': '大学生网论坛',

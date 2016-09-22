@@ -10,6 +10,7 @@ sys.setdefaultencoding("utf-8")
 import redis
 import urllib2
 import MySQLdb
+import random
 from common.conn_mysql import conn_mysql
 from common.conn_mongo import client_mongo
 from common.md5 import md5
@@ -40,34 +41,32 @@ class YuqingspiderPipeline(object):
         :return:
         """
         try:
-            # html_body save into redis, item save into mysql
-                # html_body = urllib2.urlopen(item['url'])
+
             url_md5 = md5(item['url'])
             # self.r_conn.set(url_md5, html_body.read())
             # item['html_body'] = None
 
             sqli = "insert into spider_content values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
             news = {'content': item}
-            # self.db.news.insert(news)
 
             if item['From'] == '0':
                 # self.mysqlop.execute("insert into spider_content values('url_md5')")
-                self.mysqlop.execute(sqli, (url_md5, None, item['spider_name'], item['catch_date'],
-                                            item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
-                                            None, None, None, item['site_name'].encode('utf-8'), None))
+                # self.mysqlop.execute(sqli, (url_md5, None, item['spider_name'], item['catch_date'],
+                #                             item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
+                #                             None, None, None, item['site_name'].encode('utf-8'), None))
 
                 self.db.emergency.insert(news)
             elif item['From'] == '1' or item['From'] == '3':
-                self.mysqlop.execute(sqli, (url_md5, item['publish_time'], item['spider_name'], item['catch_date'],
-                                            item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
-                                            None, None, None, item['site_name'].encode('utf-8'), None))
+                # self.mysqlop.execute(sqli, (url_md5, item['publish_time'], item['spider_name'], item['catch_date'],
+                #                             item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
+                #                             None, None, None, item['site_name'].encode('utf-8'), None))
 
                 self.db.news.insert(news)
             elif item['From'] == '2':
 
-                self.mysqlop.execute(sqli, (url_md5, item['publish_time'], item['spider_name'], item['catch_date'],
-                                            item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
-                                            item['author'].encode('utf-8'), item['replay_times'], item['view_times'], item['site_name'].encode('utf-8'), None))
+                # self.mysqlop.execute(sqli, (url_md5, item['publish_time'], item['spider_name'], item['catch_date'],
+                #                             item['From'], item['url'], item['title'].encode('utf-8'), item['summary'].encode('utf-8'), item['site_url'],
+                #                             item['author'].encode('utf-8'), item['replay_times'], item['view_times'], item['site_name'].encode('utf-8'), None))
                 self.db.bbs.insert(news)
 
         except Exception, e:
@@ -81,5 +80,8 @@ class YuqingspiderPipeline(object):
         pass
 
 if __name__ == "__main__":
-    print '\xe5\xa4\xa9\xe5\xa4\xa9'.encode('utf8')
-
+    # print '\xe5\xa4\xa9\xe5\xa4\xa9'.encode('utf8')
+    a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    random.shuffle(a)
+    for i in a:
+        print i
