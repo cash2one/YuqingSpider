@@ -1,0 +1,12 @@
+readability 0.2   
+Levenshtein 0.12.0
+jieba 0.38
+redis 数据库
+redis 2.10.5  （redis python 客户端）
+mysql
+MySQLdb 0.2.0 (mysql python 客户端)
+scrapy 1.2.0
+python2.7
+urllib
+urlparse
+gevent

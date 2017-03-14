@@ -1,0 +1,105 @@
+请求参数json：
+{
+    "sid": "xxxxxxxx",
+    "reqData": {
+		"item_ids":[
+			"111","222","333","444"
+		]
+	}
+}	
+
+返回参数json：
+{
+	"sid": "xxxxxxxx",
+	"resData": [
+		{
+			"source_item_id":"12345",					//源数据的item_id
+			"source_publish_date":"2016-08-01",    	 	//最开始的发布时间
+			"source_name":"360新闻",		        	//该主题最开始的来源网站
+			"relative_person":"王宜林",					//该主题涉及人物
+			"relative_region":"华南",					//该主题涉及地域
+			"relative_org":"广西石化",					//该主题涉及机构	
+			"media_sentiment_statistics":[				//重点关注的5个数据源倾向性统计集合
+				{
+					"media_source_name":"百度新闻",			//重点关注数据源名称
+					"media_positive_count"：20,				//该数据源下该主题正面报道数量
+					"media_negative_count"：30,				//该数据源下该主题负面报道数量
+				},
+				{
+					"media_source_name":"新浪新闻",			//重点关注数据源名称
+					"media_positive_count"：20,				//该数据源下该主题正面报道数量
+					"media_negative_count"：30,				//该数据源下该主题负面报道数量
+				},
+				{
+					"media_source_name":"搜狐新闻",			//重点关注数据源名称
+					"media_positive_count"：20,				//该数据源下该主题正面报道数量
+					"media_negative_count"：30,				//该数据源下该主题负面报道数量
+				},
+				...
+			]
+			"statistics":[							//该主题每天的数据分析统计结果集合
+				{
+					"date":"2016-08-01",			//当天时间
+					"date_count":200,				//该主题当天报道总数量
+					"news_count":200,				//该主题新闻总数量
+					"bbs_count":100,				//该主题论坛总数量
+					"blog_count":100,				//该主题博客总数量
+					"wb_count":100,					//该主题微博总数量
+					"negative_count":102,			//该主题负面文章总数量
+					"positive_count":112,			//该主题正面文章总数量
+					
+				},
+				{
+					"date":"2016-08-02",			//当天时间
+					"date_count":200,				//该主题当天报道总数量
+					"news_count":200,				//该主题新闻总数量
+					"bbs_count":100,				//该主题论坛总数量
+					"blog_count":100,				//该主题博客总数量
+					"wb_count":100,					//该主题微博总数量
+					"negative_count":102,			//该主题负面文章总数量
+					"positive_count":112,			//该主题正面文章总数量
+					
+				},
+				{
+					"date":"2016-08-03",			//当天时间
+					"date_count":200,				//该主题当天报道总数量
+					"news_count":200,				//该主题新闻总数量
+					"bbs_count":100,				//该主题论坛总数量
+					"blog_count":100,				//该主题博客总数量
+					"wb_count":100,					//该主题微博总数量
+					"negative_count":102,			//该主题负面文章总数量
+					"positive_count":112,			//该主题正面文章总数量
+					
+				},
+				...
+			]
+		},
+	]
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+请求参数json：
+{
+    "sid": "xxxxxxxx",
+    "reqData": {
+		"threshold":100,
+		"item_ids":[
+			"111","222","333","444"
+		]
+	}
+}
+
+返回参数json：
+{
+	"sid": "xxxxxxxx",
+	"resData":{
+		"negative_percent":"0.5",					//负面倾向性占比
+		"alarm_itemid":["xxxx","xxxx","xxxx"],		//回复数超过阈值的itemid集合
+		"media_count":[
+			{
+				"date":"2016-10-17",
+				"news_count":100,			//关键词新闻类出现次数
+				"bbs_count":100,			//关键词论坛类出现次数
+				"blog_count":100,			//关键词博客类出现次数
+				"wb_count":100,				//关键词微博类出现次数
+			},
+			{
+				"date":"2016-10-18",
+				"news_count":100,			//关键词新闻类出现次数
+				"bbs_count":100,			//关键词论坛类出现次数
+				"blog_count":100,			//关键词博客类出现次数
+				"wb_count":100,				//关键词微博类出现次数
+			},
+			{
+				"date":"2016-10-19",
+				"news_count":100,			//关键词新闻类出现次数
+				"bbs_count":100,			//关键词论坛类出现次数
+				"blog_count":100,			//关键词博客类出现次数
+				"wb_count":100,				//关键词微博类出现次数
+			}
+		]
+		"items_appear_times":[						//权威站点出现次数的item集合
+			{
+				"itemid":"xxxx",			//itemid
+				"count":100					//出现次数
+			},
+			{
+				"itemid":"xxxx",
+				"count":99
+			},
+			{
+				"itemid":"xxxx",
+				"count":98
+			}
+			,
+			...
+		]	
+	}
+}
+
+source_name = 'xxxx'
+count: 100

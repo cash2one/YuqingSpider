@@ -1,0 +1,122 @@
+request json
+{
+    "sid": "xxxxxxxx",
+    "reqData": {
+        "depart_id": 1,
+        "items": [
+            {
+                "title": "xxx",
+                "summary": "xxx",
+                "url": "http://www.baidu.com",
+                "source_name": "xxxx",
+                "publish_time": "2016-10-11",
+                "itemid": "xxxxxx",
+                "docid": "xxxxxxx",
+                "type": "bbs"
+            },
+            {
+                "title": "xxx",
+                "summary": "xxx",
+                "url": "http://www.baidu.com",
+                "source_name": "xxxx",
+                "publish_time": "2016-10-11",
+                "itemid": "xxxxxx",
+                "docid": "xxxxxxx",
+                "type": "bbs"
+            },
+            {
+                "title": "xxx",
+                "summary": "xxx",
+                "url": "http://www.baidu.com",
+                "source_name": "xxxx",
+                "publish_time": "2016-10-11",
+                "itemid": "xxxxxx",
+                "docid": "xxxxxxx",
+                "type": "news"
+            }
+        ]
+    }
+}
+
+response json
+{
+    "sid": "xxxxx",
+    "resData": {
+        "depart_id": 1,
+        "hotList": [
+            {
+                "title": "xxxxxxx",
+                "summary": "xxxxxxxxxxxxxxxxxxxxxxxx",
+                "provinceIdList": "1,2,3,4",
+                "relativeItems": [
+                    {
+                        "source_name": "xxxxxxxxx",
+                        "title": "xxxxxxxx",
+                        "publish_time": "2016-10-11",
+                        "url": "http://www.baidu.com",
+                        "itemid": "xxxxxxxx",
+                        "docid": "xxxxxxxxxx",
+                        "type": "news"
+                    },
+                    {
+                        "source_name": "xxxxxxxxx",
+                        "title": "xxxxxxxx",
+                        "publish_time": "2016-10-11",
+                        "url": "http://www.baidu.com",
+                        "itemid": "xxxxxxxx",
+                        "docid": "xxxxxxxxxx",
+                        "type": "bbs"
+                    }
+                ]
+            },
+            {
+                "title": "xxxxxxx",
+                "summary": "xxxxxxxxxxxxxxxxxxxxxxxx",
+                "provinceIdList": "1,2,3,4",
+                "relativeItems": [
+                    {
+                        "source_name": "xxxxxxxxx",
+                        "title": "xxxxxxxx",
+                        "publish_time": "2016-10-11",
+                        "url": "http://www.baidu.com",
+                        "itemid": "xxxxxxxx",
+                        "docid": "xxxxxxxxxx",
+                        "type": "bbs"
+                    },
+                    {
+                        "source_name": "xxxxxxxxx",
+                        "title": "xxxxxxxx",
+                        "publish_time": "2016-10-11",
+                        "url": "http://www.baidu.com",
+                        "itemid": "xxxxxxxx",
+                        "docid": "xxxxxxxxxx",
+                        "type": "news"
+                    }
+                ]
+            }
+        ]
+    }
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

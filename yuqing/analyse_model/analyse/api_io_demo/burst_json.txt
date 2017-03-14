@@ -1,0 +1,106 @@
+�������json��
+{
+    "sid": "xxxxxxxx",
+    "reqData": {
+        "depart_id": 1,
+        "items": [
+            {
+                "title": "xxx",
+                "summary": "xxx",
+                "url": "http://www.baidu.com",
+                "source_name": "xxxx",
+                "publish_time": "2016-10-11",
+                "itemid": "xxxxxx",
+                "docid": "xxxxxxx"
+            },
+            {
+                "title": "xxx",
+                "summary": "xxx",
+                "url": "http://www.baidu.com",
+                "source_name": "xxxx",
+                "publish_time": "2016-10-11",
+                "itemid": "xxxxxx",
+                "docid": "xxxxxxx"
+            },
+            {
+                "title": "xxx",
+                "summary": "xxx",
+                "url": "http://www.baidu.com",
+                "source_name": "xxxx",
+                "publish_time": "2016-10-11",
+                "itemid": "xxxxxx",
+                "docid": "xxxxxxx"
+            }
+        ]
+    }
+}
+
+���ز���json��
+{
+	"sid": "xxxxxxxx",
+	"resData": {
+        "depart_id": 1,
+		"burst_events":[
+		{
+		    "title":"天津港爆炸"
+			{
+				"keyword":"�ͼ�����0.5Ԫ",
+												//ÿСʱ���ִ���
+				"times_total":100								//�����ܴ���	
+				
+			},
+			{
+				"keyword":"�;���ը",
+
+				"times_total":150
+				
+			},
+			{
+				"keyword":"�ͼ۴��",
+
+				"times_total":200
+			}
+		},
+		{
+		  event_rate = 26(times/min)
+			{
+				"keyword":"�ͼ�����0.5Ԫ",
+												//ÿСʱ���ִ���
+				"times_total":140								//�����ܴ���
+
+			},
+			{
+				"keyword":"�;���ը",
+
+				"times_total":150
+
+			},
+			{
+				"keyword":"�ͼ۴��",
+
+				"times_total":200
+			}
+
+		}
+
+		]	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
